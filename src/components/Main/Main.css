@@ -1,0 +1,312 @@
+.main{
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+}
+
+.main .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+}
+
+.main .nav img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.main-container{
+    max-width: 900px;
+    margin: auto;
+}
+
+.main .greet{
+    margin: 50px 0px;
+    font-size: 64px;
+    color: #c4c7c4;
+    font-weight: 500px;
+    padding: 20px;
+}
+
+.main .greet span{
+    background: -webkit-linear-gradient(16deg,#4b90ff,#ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.main .card{
+    height: 200px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.main .card img{
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .card p{
+    color: #585858;
+    font-size: 17px;
+}
+
+.main .card:hover{
+    background-color: #dfe4ea;
+}
+
+.main-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.search-box img{
+    width: 24px;
+    cursor: pointer;
+}
+
+.search-box input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.search-box dev{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+} 
+
+.main .bottom-info{
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+.result{
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+
+
+}
+
+.result::-webkit-scrollbar{
+    display: none;
+}
+.result-title
+{
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.result img{
+    width: 40px;
+    border-radius: 50%;
+
+}
+
+.result-data{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+
+}
+
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right,#9ed7ff,#ffffff,#9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+@keyframes loader{
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+
+.result-data p {
+  color: #222;                /* darker than before */
+  font-size: 16px;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+
+.result-title p {
+  color: #000;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.greet p {
+  color: #222;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.result-data b {
+  display: block;             /* makes each bold heading start on a new line */
+  font-weight: 700;           /* bold */
+  color: #111;                /* slightly darker */
+  margin-top: 10px;           /* adds space before headings */
+  margin-bottom: 4px;         /* small gap below heading */
+  font-size: 17px;            /* slightly larger for prominence */
+}
+
+/* styling for the side headings we create in JS */
+.main .result .result-data .side-heading {
+  display: block;
+  font-weight: 700;
+  color: #111;
+  font-size: 17px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+@media (max-width:600px) {
+    .main-bottom input{
+        flex: none;
+        width: 150px;
+    }
+    .main-bottom img{
+        width: 20px;
+    }
+    .search-box{
+        padding: 5px 10px;
+    }
+    .search-box div{
+        gap: 5px;
+    }
+    
+}
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icons */
+}
+
+.icon-container img {
+  width: 20px; /* optional: control icon size */
+  height: 20px;
+  cursor: pointer;
+}
+.ai-greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a73e8; /* Google blue style */
+  margin-top: 30px;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* waving emoji animation */
+.wave-hand {
+  display: inline-block;
+  animation: wave 1.8s infinite;
+  transform-origin: 70% 70%;
+}
+
+/* fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* waving hand keyframes */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+.ai-greeting {
+  animation: fadeInUp 1.2s ease-in-out, fadeOut 1s ease-in-out 4s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+.greet-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
